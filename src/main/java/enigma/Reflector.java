@@ -16,7 +16,8 @@ public class Reflector extends Rotor {
 		return new Reflector(cipher);
 	}
 	
-	private Reflector(int[] r){
+	Reflector(int[] r){
+		super(r,0);
 		reflection = r;
 	}
         

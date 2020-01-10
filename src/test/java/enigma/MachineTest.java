@@ -15,6 +15,9 @@ public class MachineTest {
 	String code2 = "FROMHISSHOULDERHIAWATHA";
 	
 	@Test
+	/**
+	 * This is more a validation tests, than an unit test
+	 */
 	public void convert_Msg1_code1() {
 		Machine m = new Machine();
 		Main.configure(m, config);
@@ -24,6 +27,9 @@ public class MachineTest {
 	}
 
 	@Test
+	/**
+	 * This is more a validation tests, than an unit test
+	 */
 	public void unconvert_Msg2_code2() {
 		Machine m = new Machine();
 		Main.configure(m, config);

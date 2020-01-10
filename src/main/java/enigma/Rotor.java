@@ -31,21 +31,17 @@ public class Rotor {
 		
 	}
 	
-	private Rotor(int[] c, int notch1, int notch2) {
+	Rotor(int[] c, int notch1, int notch2) {
 		this.notch1 = notch1;
 		this.notch2 = notch2;
 		cipher = c;
 		createBCipher();
 	}
 	
-	private Rotor(int[] c, int notch1) {
+	Rotor(int[] c, int notch1) {
 		this.notch1 = notch1;
 		cipher = c;
 		createBCipher();
-	}
-	
-	protected Rotor() {
-		
 	}
 
     public int convertForward(int p) {
