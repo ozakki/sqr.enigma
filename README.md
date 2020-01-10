@@ -17,13 +17,21 @@ Code for the German Enigma machine used in WW2.
 Hereafter, for each classes give function to be tested. Remember that all functions does not have to be tested, some code can be checked by a simple inspection or an analyse, another code can be validated by definition (rules, etc) the others function can be tecsted by unit tests, integration tests or validation tests (IADT: Inspect, Analyse, Define, Test). 
 
 ### Classe Machine
-#### functions
+convert
+convertChar
+advanceRotors
+#### 
 
 ### Classe Reflector
-#### functions
+reflectorFactory
+convertForward
+####
 
 ### Classe Rotor
-#### functions
+convertForward
+convertBackward
+advance
+#### 
 
 ## Tricks & tips
 

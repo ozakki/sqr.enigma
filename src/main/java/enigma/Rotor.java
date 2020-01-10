@@ -16,7 +16,7 @@ public class Rotor {
         position = posn;
     }
     
-    // fjdjfdj
+    // Fabrique un rotor à partir de tableau de lettre de l'alphabet dans un ordre donné
 	public static Rotor rotorFactory(String str, String notches){ 
 		char[] s = str.trim().replace(" ", "").toCharArray();
 		int[] cipher = new int[26];
@@ -32,28 +32,28 @@ public class Rotor {
 		
 	}
 	
-	Rotor(int[] c, int notch1, int notch2) {
+	Rotor(int[] c, int notch1, int notch2) { // constructeur pour deux notch
 		this.notch1 = notch1;
 		this.notch2 = notch2;
 		cipher = c;
 		createBCipher();
 	}
 	
-	Rotor(int[] c, int notch1) {
+	Rotor(int[] c, int notch1) { // constructeur pour un notch
 		this.notch1 = notch1;
 		cipher = c;
 		createBCipher();
 	}
 
-    public int convertForward(int p) {
+    public int convertForward(int p) { // traversée du rotor en aller
         return ((cipher[((p+position)%26+26)%26]-position)%26+26)%26;
     }
 
-    public int convertBackward(int e) {
+    public int convertBackward(int e) { // traversée du rotor en retour
         return ((bcipher[((e+position)%26+26)%26]-position)%26+26)%26;
     }
     
-    public void advance() {
+    public void advance() { // permet le mouvement du rotor 
         position = (position+1) % 26;
     }
     

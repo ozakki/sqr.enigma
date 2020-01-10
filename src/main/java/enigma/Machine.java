@@ -13,7 +13,7 @@ public class Machine {
 		middleRotor = middle;
 		rightRotor = right;
 	}
-
+// positionne les rotors
 	public void setPositions(String setting) {
 		char[] charSettings = setting.toCharArray();
 		reflector.setPosition(Rotor.toIndex(charSettings[0]));
@@ -27,7 +27,7 @@ public class Machine {
 		this.setPositions(setting);
 
 	}
-
+	
 	public String convert(String msg) {
 		msg = msg.toUpperCase();
 		char[] msgChars = msg.toCharArray();
@@ -37,7 +37,7 @@ public class Machine {
 		}
 		return result;
 	}
-
+// traversée de la machine
 	char convertChar(char c) {
 		advanceRotors();
 		int charIndex = Rotor.toIndex(c);
@@ -52,7 +52,7 @@ public class Machine {
 		return Rotor.toLetter(output);
 
 	}
-
+// fait avancer les rotors lorqu'on est sur un notch
 	void advanceRotors() {
 		boolean advanceLeft = false;
 		boolean advanceMiddle = false;

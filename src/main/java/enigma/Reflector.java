@@ -6,7 +6,8 @@ package enigma;
 public class Reflector extends Rotor {
 	
 	int[] reflection;
-	
+	// fabrique un rotor de la même manière que rotorFactory
+	// reflector correspond au rotor central, il n'a pas de convertBackward
 	public static Reflector reflectorFactory(String str){
 		char[] s = str.trim().replace(" ", "").toCharArray();
 		int[] cipher = new int[26];
@@ -21,7 +22,7 @@ public class Reflector extends Rotor {
 		reflection = r;
 	}
         
-    public int convertForward(int p) {
+    public int convertForward(int p) { // traversée du rotor en aller
         return ((reflection[((p)%26+26)%26])%26+26)%26;
     }
 
