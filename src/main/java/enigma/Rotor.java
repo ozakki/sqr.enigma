@@ -16,7 +16,8 @@ public class Rotor {
         position = posn;
     }
     
-	public static Rotor rotorFactory(String str, String notches){
+    // fjdjfdj
+	public static Rotor rotorFactory(String str, String notches){ 
 		char[] s = str.trim().replace(" ", "").toCharArray();
 		int[] cipher = new int[26];
 		for (int i = 0; i< 26; i++){
